@@ -21,6 +21,31 @@ app.get('/api/jobs', (req, res) => {
   }
 });
 
+// API: Add new job
+app.post('/api/jobs', (req, res) => {
+  const newJob = req.body;
+  const jobsPath = path.join(__dirname, 'data', 'jobs.json');
+  
+  let data = { jobs: [], total: 0 };
+  if (fs.existsSync(jobsPath)) {
+    data = JSON.parse(fs.readFileSync(jobsPath, 'utf8'));
+  }
+  
+  // Check if job already exists
+  const existingIndex = data.jobs.findIndex(j => j.id === newJob.id);
+  if (existingIndex >= 0) {
+    // Update existing
+    data.jobs[existingIndex] = { ...data.jobs[existingIndex], ...newJob };
+  } else {
+    // Add new
+    data.jobs.push(newJob);
+    data.total = data.jobs.length;
+  }
+  
+  fs.writeFileSync(jobsPath, JSON.stringify(data, null, 2));
+  res.json({ success: true, job: newJob, total: data.total });
+});
+
 // API: Update job status
 app.put('/api/jobs/:id', (req, res) => {
   const { id } = req.params;
