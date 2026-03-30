@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "id": "demo-1",
+      "title": "AI Automation Engineer",
+      "company": "TechCorp AI",
+      "location": "Remote",
+      "source": "linkedin",
+      "score": 92,
+      "category": "strong_match",
+      "status": "qualified",
+      "reasons": ["Strong title match", "Remote", "AI keywords"],
+      "description": "Building AI-powered automation systems for enterprise clients. Looking for someone with experience in LangChain, OpenAI API, and full-stack development.",
+      "url": "https://linkedin.com/jobs/demo-1",
+      "salary_low": 140000,
+      "salary_high": 180000,
+      "scraped_at": "2026-03-30T08:00:00Z"
+    },
+    {
+      "id": "demo-2",
+      "title": "Full-Stack Developer",
+      "company": "StartupXYZ",
+      "location": "San Francisco, CA (Hybrid)",
+      "source": "indeed",
+      "score": 78,
+      "category": "stretch",
+      "status": "new",
+      "reasons": ["Engineering role", "Hybrid option"],
+      "description": "Full-stack development with React and Node.js. Fast-growing startup looking for experienced developers.",
+      "url": "https://indeed.com/jobs/demo-2",
+      "salary_low": 120000,
+      "salary_high": 160000,
+      "scraped_at": "2026-03-30T08:00:00Z"
+    },
+    {
+      "id": "demo-3",
+      "title": "Machine Learning Engineer",
+      "company": "AI Innovations",
+      "location": "Remote",
+      "source": "linkedin",
+      "score": 88,
+      "category": "strong_match",
+      "status": "applying",
+      "reasons": ["Strong ML focus", "Remote", "Competitive salary"],
+      "description": "Build ML models for production. Experience with Python, PyTorch, and cloud deployment required.",
+      "url": "https://linkedin.com/jobs/demo-3",
+      "salary_low": 150000,
+      "salary_high": 200000,
+      "scraped_at": "2026-03-30T08:00:00Z"
+    }
+  ],
+  "total": 3,
+  "last_updated": "2026-03-30T08:00:00Z"
+}
