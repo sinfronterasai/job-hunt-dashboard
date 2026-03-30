@@ -10,3 +10,7 @@ services:
         value: production
       - key: PORT
         value: 10000
+    autoDeploy: true
+    branch: master
+    healthCheckPath: /
+    numInstances: 1

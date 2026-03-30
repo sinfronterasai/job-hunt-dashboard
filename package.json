@@ -1,7 +1,7 @@
 {
   "name": "job-hunt-dashboard",
   "version": "1.0.0",
-  "description": "Automated job hunt pipeline dashboard",
+  "description": "Automated job application pipeline dashboard",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
