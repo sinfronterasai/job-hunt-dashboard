@@ -68,6 +68,14 @@ app.put('/api/jobs/:id', (req, res) => {
   }
 });
 
+// API: Delete all jobs (reset)
+app.delete('/api/jobs', (req, res) => {
+  const jobsPath = path.join(__dirname, 'data', 'jobs.json');
+  const emptyData = { jobs: [], total: 0, last_updated: new Date().toISOString() };
+  fs.writeFileSync(jobsPath, JSON.stringify(emptyData, null, 2));
+  res.json({ success: true, message: 'All jobs deleted', total: 0 });
+});
+
 // API: Get stats
 app.get('/api/stats', (req, res) => {
   const jobsPath = path.join(__dirname, 'data', 'jobs.json');
